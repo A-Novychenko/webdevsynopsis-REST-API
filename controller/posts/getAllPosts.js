@@ -8,7 +8,7 @@ const getAllPosts = async (req, res) => {
   // const {page = 1, limit = 20, favorite} = req.query;
   // const skip = (page - 1) * limit;
   // const filter = favorite === undefined ? null : {favorite};
-  console.log("stack", stack);
+  // console.log("stack", stack);
 
   const result = await Post.find(
     {stack}
@@ -17,7 +17,7 @@ const getAllPosts = async (req, res) => {
     //   limit,
     // }
   );
-  console.log("result", result);
+  // console.log("result", result);
   res.json({
     status: "success",
     code: 200,

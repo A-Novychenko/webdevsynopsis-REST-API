@@ -1,4 +1,4 @@
-const {HttpError} = require("../../helpers");
+// const {HttpError} = require("../../helpers");
 const {Post} = require("../../models/posts");
 
 const addPost = async (req, res) => {

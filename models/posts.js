@@ -2,7 +2,7 @@ const {Schema, model} = require("mongoose");
 const Joi = require("joi");
 const {handleMongooseError} = require("../helpers");
 
-const contactMongooseSchema = new Schema(
+const postMongooseSchema = new Schema(
   {
     title: {
       type: String,
@@ -35,7 +35,7 @@ const contactMongooseSchema = new Schema(
   {versionKey: false}
 );
 
-contactMongooseSchema.post("save", handleMongooseError);
+postMongooseSchema.post("save", handleMongooseError);
 
 const addPostSchema = Joi.object({
   title: Joi.string()
@@ -60,6 +60,6 @@ const schemas = {
   addPostSchema,
 };
 
-const Post = model("post", contactMongooseSchema);
+const Post = model("post", postMongooseSchema);
 
 module.exports = {schemas, Post};
